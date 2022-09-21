@@ -2,10 +2,30 @@ img {
   height: 18rem;
 }
 
-.container {
-  /* width:70%; */
+div .row {
+  padding-right: 3rem;
+  padding-left:3rem;
+  padding-bottom:2rem;
+  /* padding-top: 2rem; */
+}
+
+div.outer-container:nth-child(even) {
+  background-color:#eee;
+  /* text-align: */
+}
+
+div.outer-container:nth-child(n+2) {
+  padding-top:2rem;
 }
 
 h2 {
   margin:0;
+}
+
+.white-bg {
+  background-color:white;
+}
+
+.navbar{
+  margin-bottom:0px;
 }

@@ -26,6 +26,6 @@ var search = document.getElementById("search");
 search.addEventListener('keypress', function (e) {
   if (e.key === 'Enter') {
     var tempValue = search.value;
-    window.open("../views/search.html?"+tempValue, '_blank');
+    window.open("./views/search.html?"+tempValue, '_blank');
   }
 });

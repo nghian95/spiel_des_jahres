@@ -11,7 +11,6 @@ div .row {
 
 div.outer-container:nth-child(even) {
   background-color:#eee;
-  /* text-align: */
 }
 
 div.outer-container:nth-child(n+2) {
@@ -28,4 +27,8 @@ h2 {
 
 .navbar{
   margin-bottom:0px;
+}
+
+table img {
+  height: 10rem;
 }

@@ -6,7 +6,7 @@ var parser, xmlDoc, cascadiaName, cascadiaImg, cascadiaRating;
 // var text = req.responseText;
 
 parser = new DOMParser();
-xmlDoc = parser.parseFromString(text, "text/xml");
+// xmlDoc = parser.parseFromString(text, "text/xml");
 
 // cascadiaName = document.getElementById("cascadiaName");
 // cascadiaName.innerHTML = xmlDoc.getElementsByTagName("name")[0].getAttribute('value');
@@ -17,7 +17,7 @@ xmlDoc = parser.parseFromString(text, "text/xml");
 // cascadiaRating = document.getElementById("cascadiaRating");
 // cascadiaRating.innerHTML += Math.round(xmlDoc.getElementsByTagName("average")[0].getAttribute('value')*10)/10;
 
-req.open("GET", "http://localhost:8080/https://boardgamegeek.com/xmlapi2/thing?id=346703,342207,303669,331571,329839,303672&stats=1", false);
+req.open("GET", "http://localhost:8080/https://boardgamegeek.com/xmlapi2/thing?id=342942,299684,318560&stats=1", false);
 req.send(null);
 var text = req.responseText;
 

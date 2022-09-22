@@ -2,6 +2,12 @@
 A webpage detailing information on the Spiel Des Jahres based in Germany for boardgames along with winners and nominees.
 
 # Technical Specifications
+GitHub Repository:
+https://github.com/nghian95/spiel_des_jahres
+
+Live Demo of the website (only fully works if your local is running CORS-Anywhere):
+https://nghian95.github.io/spiel_des_jahres/
+
 This website uses Bootstrap 3.4.1 through a Content Delivery Network (CDN) to style the divs and navigation bar.
 https://getbootstrap.com/docs/3.4/
 
@@ -17,3 +23,6 @@ The project uses HTML, CSS & JavaScript. These files are located under their res
 # General Flow
 On the home page of the Spiel des Jahres website, it provides basic info on the awards and the 2022 Spiel das Jahres winner and nominees.
 At the top of each page, there's a navigation bar that you can use to access different awards and their winners and nominees throughout the years.
+
+# Technical Requirements
+*At least 10 different HTML tags: 

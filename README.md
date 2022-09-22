@@ -26,12 +26,9 @@ At the top of each page, there's a navigation bar that you can use to access dif
 There's also a search bar that you can use to search for a specific game and it'll provide a list of board game results and their respective boardgamegeek links.
 
 # Technical Requirements To Meet
-*Drop down menu - (filtering?)
 *web fonts
-*include videos and GIFs
+*include videos and GIFs (https://www.youtube.com/watch?v=uxh-v7R4P1M)
 *regex validation
-*5 different css selectors
-*check form of collections are used
-*maybe create a named function. have an anonymous function to listen to events currently.
+*check form of collections are used (Map & Set?)
 *(Optional) Pagination for Search Results
 

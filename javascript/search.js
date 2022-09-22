@@ -2,7 +2,8 @@ var req = new XMLHttpRequest();
 const queryString = window.location.search;
 queryString.replace("?","");
 
-req.open("GET", "http://localhost:8080/https://boardgamegeek.com/xmlapi2/search?query=" + queryString, false);
+// req.open("GET", "http://localhost:8080/https://boardgamegeek.com/xmlapi2/search?query=" + queryString, false);
+req.open("GET", "https://boardgamegeek.com/xmlapi2/search?query=" + queryString, false);
 req.send(null);
 var parser, xmlDoc, cascadiaName, cascadiaImg, cascadiaRating;
 var text = req.responseText;

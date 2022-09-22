@@ -16,8 +16,10 @@ xmlDoc = parser.parseFromString(text, "text/xml");
 
 // cascadiaRating = document.getElementById("cascadiaRating");
 // cascadiaRating.innerHTML += Math.round(xmlDoc.getElementsByTagName("average")[0].getAttribute('value')*10)/10;
-
-req.open("GET", "http://localhost:8080/https://boardgamegeek.com/xmlapi2/thing?id=346703,342207,303669,331571,329839,303672&stats=1", false);
+var boardgames = "346703,342207,303669,331571,329839,303672" + /*2022*/
+",318195,267378,274960,317311,322039"; 
+// req.open("GET", "http://localhost:8080/https://boardgamegeek.com/xmlapi2/thing?id="+boardgames+"&stats=1", false);
+req.open("GET", "https://boardgamegeek.com/xmlapi2/thing?id="+boardgames+"&stats=1", false);
 req.send(null);
 var text = req.responseText;
 
@@ -25,8 +27,12 @@ var xmlDocRec = parser.parseFromString(text, "text/xml");
 
 var tempGames = xmlDocRec.getElementsByTagName("item");
 var recTable = document.getElementById("recommended");
+var year = 2022;
 
 for (var i = 0; i < tempGames.length; i++) {
+  if (i == 6) {
+    year--;
+  }
   // document.write(tempNames[i]);
   // var row = document.createElement()
   var row = recTable.insertRow();
@@ -42,7 +48,7 @@ for (var i = 0; i < tempGames.length; i++) {
   cell3.innerHTML = Math.round(tempGames[i].getElementsByTagName("average")[0].getAttribute('value')*10)/10;
 
   var cell4 = row.insertCell(3);
-  cell4.innerHTML = 2022;
+  cell4.innerHTML = year;
 }
 
 var search = document.getElementById("search");
@@ -54,23 +60,65 @@ search.addEventListener('keypress', function (e) {
   }
 });
 
+// $(document).ready(function() {
+//   $("#filterButton").click(function(){
+//     var value = $("#filter").val().toLowerCase();
+//     var year = $("#select").val();
+//     if (year != "All Years") {
+//       $("tr:not(#headerRow)").filter(function(){
+//         $(this).toggle(($(this).text().toLowerCase().indexOf(value) > -1) && ($(this).text().indexOf(year) > -1))
+//       });
+//     } else {
+//       $("tr:not(#headerRow)").filter(function(){
+//         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+//       });
+//     }
+//   })
+// });
+
 $(document).ready(function() {
-  $("#filter").on("keyup", function() {
-    var value = $(this).val().toLowerCase();
-    $("tr:not(#headerRow)").filter(function(){
-      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-    });
-  });
-  $("#select").change(function() {
-    var year = $(this).val();
+  $("#filter").on("keyup", search);
+  $("#select").change(search);
+
+  function search() {
+    var value = $("#filter").val().toLowerCase();
+    var year = $("#select").val();
     if (year != "All Years") {
-      console.log(year);
       $("tr:not(#headerRow)").filter(function(){
-        $(this).toggle($(this).text().indexOf(year) > -1)
+        $(this).toggle(($(this).text().toLowerCase().indexOf(value) > -1) && ($(this).text().indexOf(year) > -1))
+      });
+    } else {
+      $("tr:not(#headerRow)").filter(function(){
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
       });
     }
-  });
+  }
+
 });
 
+// function filterText() {
+//   $("#filter").on("keyup", function() {
+//     // $("select").change();
+//     var value = $(this).val().toLowerCase();
+//     $("tr:not(#headerRow)").filter(function(){
+//       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+//     });
+//   });
+// }
+
+// function filterYear(){
+//   $("#select").change(function() {
+//     var year = $(this).val();
+//     if (year != "All Years") {
+//       $("tr:not(#headerRow)").filter(function(){
+//         $(this).toggle($(this).text().indexOf(year) > -1)
+//       });
+//     } else {
+//       $("tr:not(#headerRow)").filter(function(){
+//         $(this).toggle($true)
+//       });
+//     }
+//   })
+// }
 
 

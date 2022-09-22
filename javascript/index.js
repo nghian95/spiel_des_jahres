@@ -1,5 +1,6 @@
 var req = new XMLHttpRequest();
-req.open("GET", "http://localhost:8080/https://boardgamegeek.com/xmlapi2/thing?id=295947&stats=1", false);
+// req.open("GET", "http://localhost:8080/https://boardgamegeek.com/xmlapi2/thing?id=295947&stats=1", false);
+req.open("GET", "https://boardgamegeek.com/xmlapi2/thing?id=295947&stats=1", false);
 req.send(null);
 
 var parser, xmlDoc, cascadiaName, cascadiaImg, cascadiaRating;

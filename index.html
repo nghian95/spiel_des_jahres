@@ -12,6 +12,11 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
   <script type="text/javascript" src="./javascript/index.js" defer></script>
   <link href="./style/main.css" rel="stylesheet">
+  <style>
+    div > div > h2 {
+      text-align:left;
+    }
+  </style>
 </head>
 <body>
   <nav class="navbar navbar-default">
@@ -23,6 +28,10 @@
       <li><a href="./views/spiel.html">Spiel des Jahres</a></li>
       <li><a href="./views/kinderspiel.html">Kinderspiel des Jahres</a></li>
       <li><a href="./views/kennerspiel.html">Kennerspiel des Jahres</a></li>
+      <li class="form-group">
+        <!-- <label for="search"></label> -->
+        <input type="search" class="form-control" id="search" placeholder="Search BGG">
+      </li>
     </ul>
   </nav>
   <div class="jumbotron text-center">
@@ -33,7 +42,7 @@
     <div class="container">
       <div class="row" ">
         <div class="col-sm-4">
-          <h2 style="text-align:left">What exactly is the Spiel des Jahres?</h2>
+          <h2>What exactly is the Spiel des Jahres?</h2>
         </div>
         <div class="col-sm-8">
           <p style="text-align:left">The Spiel des Jahres is the most prestigious award for board and card games that's held annually. The jury is made up of German-speaking 

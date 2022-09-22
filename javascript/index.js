@@ -20,3 +20,12 @@ cascadiaRating.innerHTML += Math.round(xmlDoc.getElementsByTagName("average")[0]
 document.getElementById('submit').onclick = function(e) {
   alert(document.getElementById("game").value);
 }
+
+var search = document.getElementById("search");
+
+search.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    var tempValue = search.value;
+    window.open("../views/search.html?"+tempValue, '_blank');
+  }
+});

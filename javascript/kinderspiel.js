@@ -29,3 +29,12 @@ for (var i = 0; i < tempGames.length; i++) {
   var cell4 = row.insertCell(3);
   cell4.innerHTML = 2022;
 }
+
+var search = document.getElementById("search");
+
+search.addEventListener('keypress', function (e) {
+  if (e.key === 'Enter') {
+    var tempValue = search.value;
+    window.open("../views/search.html?"+tempValue, '_blank');
+  }
+});

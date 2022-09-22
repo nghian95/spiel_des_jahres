@@ -22,7 +22,16 @@ The project uses HTML, CSS & JavaScript. These files are located under their res
 
 # General Flow
 On the home page of the Spiel des Jahres website, it provides basic info on the awards and the 2022 Spiel das Jahres winner and nominees.
-At the top of each page, there's a navigation bar that you can use to access different awards and their winners and nominees throughout the years.
+At the top of each page, there's a navigation bar that you can use to access different awards and their winners, nominees and recommendations throughout the years.
+There's also a search bar that you can use to search for a specific game and it'll provide a list of board game results and their respective boardgamegeek links.
 
-# Technical Requirements
-*At least 10 different HTML tags: 
+# Technical Requirements To Meet
+*Drop down menu - (filtering?)
+*web fonts
+*include videos and GIFs
+*regex validation
+*5 different css selectors
+*check form of collections are used
+*maybe create a named function. have an anonymous function to listen to events currently.
+*(Optional) Pagination for Search Results
+

@@ -38,3 +38,12 @@ search.addEventListener('keypress', function (e) {
     window.open("../views/search.html?"+tempValue, '_blank');
   }
 });
+
+$(document).ready(function() {
+  $("#filter").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("tr:not(#headerRow)").filter(function(){
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});

@@ -61,4 +61,13 @@ $(document).ready(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
     });
   });
+  $("#select").change(function() {
+    var year = $(this).val();
+    if (year != "All Years") {
+      console.log(year);
+      $("tr:not(#headerRow)").filter(function(){
+        $(this).toggle($(this).text().indexOf(year) > -1)
+      });
+    }
+  });
 });

@@ -47,6 +47,29 @@ li.form-group {
   width: fit-content;
 }
 
+
 li {
   margin-left:2rem;
+}
+
+select li{
+  width:-moz-fit-content;
+  width:fit-content;
+}
+
+#filterSection {
+  width:-moz-fit-content;
+  width:fit-content;
+  display:flex;
+  margin-top:.5rem;
+  margin-bottom:.5rem;
+  /* justify-content:flex-start; */
+}
+
+#filterSection > *:nth-child(n+2) {
+  margin-left: 1rem;
+}
+
+#filter{
+  width:150px;
 }

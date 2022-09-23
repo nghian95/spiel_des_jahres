@@ -59,7 +59,7 @@ select li{
   width:fit-content;
 }
 
-#filterSection {
+#filterSection, #winnerFilterSection {
   width:-moz-fit-content;
   width:fit-content;
   display:flex;
@@ -68,7 +68,7 @@ select li{
   /* justify-content:flex-start; */
 }
 
-#filterSection > *:nth-child(n+2) {
+#filterSection > *:nth-child(n+2), #winnerFilterSection > *:nth-child(n+2) {
   margin-left: 1rem;
 }
 

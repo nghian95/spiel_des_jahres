@@ -24,7 +24,10 @@ for (var i = 0; i < winnerGames.length; i++) {
   cell.appendChild(tempImg);
 
   var cell2 = row.insertCell(1);
-  cell2.innerHTML = winnerGames[i].getElementsByTagName("name")[0].getAttribute('value');
+  var anchor = document.createElement("a");
+  anchor.setAttribute("href", "https://boardgamegeek.com/boardgame/" + winnerGames[i].getAttribute('id'));
+  anchor.innerHTML = winnerGames[i].getElementsByTagName("name")[0].getAttribute('value');
+  cell2.appendChild(anchor);
 
   var cell3 = row.insertCell(2);
   cell3.innerHTML = awardStatus;
@@ -59,7 +62,10 @@ for (var i = 0; i < nomineeGames.length; i++) {
   cell.appendChild(tempImg);
 
   var cell2 = row.insertCell(1);
-  cell2.innerHTML = nomineeGames[i].getElementsByTagName("name")[0].getAttribute('value');
+  var anchor = document.createElement("a");
+  anchor.setAttribute("href", "https://boardgamegeek.com/boardgame/" + nomineeGames[i].getAttribute('id'));
+  anchor.innerHTML = nomineeGames[i].getElementsByTagName("name")[0].getAttribute('value');
+  cell2.appendChild(anchor);
 
   var cell3 = row.insertCell(2);
   cell3.innerHTML = awardStatus;
@@ -102,7 +108,10 @@ for (var i = 0; i < tempGames.length; i++) {
   cell.appendChild(tempImg);
 
   var cell2 = row.insertCell(1);
-  cell2.innerHTML = tempGames[i].getElementsByTagName("name")[0].getAttribute('value');
+  var anchor = document.createElement("a");
+  anchor.setAttribute("href", "https://boardgamegeek.com/boardgame/" + nomineeGames[i].getAttribute('id'));
+  anchor.innerHTML = nomineeGames[i].getElementsByTagName("name")[0].getAttribute('value');
+  cell2.appendChild(anchor);
 
   var cell3 = row.insertCell(2);
   cell3.innerHTML = awardStatus;

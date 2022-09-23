@@ -1,6 +1,6 @@
 
 
-img {
+div > img {
   height: 18rem;
 }
 
@@ -37,6 +37,49 @@ h2 {
 
 table img {
   height: 10rem;
+}
+
+@media (max-width: 768px) {
+  /* #gif {
+    width:100%;
+  } */
+  #adjustRow {
+    display:flex;
+    flex-direction:column;
+  }
+  #question{
+    order:1;
+  }
+  #blurb{
+    order:2;
+  }
+  .indexNominee {
+    display:flex;
+    flex-direction:column;
+  }
+  #vid {
+    height: 270px;
+    width: 480px;
+  }
+  #cascadiaP {
+    margin-top:1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  div.col-sm-3 img {
+    height: 15rem;
+  }
+  /* #gif {
+    width:100%;
+  } */
+}
+
+@media (min-width:992px) {
+  div.col-sm-3 img {
+    height: 18rem;
+  }
+
 }
 
 li.form-group {

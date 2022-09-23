@@ -60,14 +60,29 @@
   </div>
   <div class="outer-container">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-8">
+      <div class="row" id="adjustRow">
+        <div class="col-sm-8" id="blurb">
           <p>Yes, there's also the Kinderspiel des Jahres (which is German for Children's Game of the Year) and the Kennerspiel des Jahres (Connoisseur/Expert Game of the Year) 
             awards given out each year as well. The Kennerspiel des Jahres focuses on games that present more of a challenge and have more experience with board games. 
           </p>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4" id="question">
           <h2>Do they give out any other awards?</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="outer-container">
+    <div class="container">
+      <div class="row" ">
+        <div class="col-sm-4">
+          <h2>What are the Recommended games?</h2>
+        </div>
+        <div class="col-sm-8">
+          <p style="text-align:left">There's only 1 Winner per year and usually 2-4 Nominees, which isn't a lot when you take into consideration that around 3,500 new board games 
+            are created every year. You can think of the Recommended games as honorable mentions - they didn't quite make the cut for the Nominees but they're still great games
+            that the jury wants to inform the players about.
+          </p>
         </div>
       </div>
     </div>
@@ -85,7 +100,7 @@
               alt="picture of the Cascadia board game with an elk in the front and snowy mountains and a lake in the background">
         </div>
         <div class="col-sm-6">
-          <p >
+          <p id="cascadiaP">
             In the tile-laying game of the same name, up to four nature-lovers compete to create a habitat rich in victory points, 
             connecting matching landscape tiles to form as large an area as possible. This objective is just one of the levels of “Cascadia’s” two-part puzzle, 
             the other relates to the region’s native animals, who will only move into the area when the geographic conditions are right. 
@@ -99,8 +114,8 @@
   </div>
   <div class="outer-container">
     <div class="container">
-      <div class="row">
-        <div class="col-sm-6">
+      <div class="row" style="display:flex; justify-content:space-around">
+        <div class="col-sm-6" class="indexNominee">
           <div class="col-sm-6">
             <h2 id="scoutName"></h2>
             <h2><small>2022 Nominee</small></h2>
@@ -109,7 +124,7 @@
           <img id="scoutImg"
                alt="picture of the Scout board game">
         </div>
-        <div class="col-sm-6">
+        <div class="col-sm-6" class="indexNominee">
           <div class="col-sm-6">
             <h2 id="top10Name"></h2>
             <h2><small>2022 Nominee</small></h2>
@@ -121,8 +136,8 @@
       </div>
     </div>
   </div>
-  <div class="outer-container">
-    <div class="container" style="margin-bottom:1.9rem">
+  <div class="outer-container" style="padding-bottom:2rem;">
+    <div class="container" >
       <form style="margin-left:2.9rem">
         <div class="form-group">
           <label for="game">What's your favorite game?</label>
@@ -135,13 +150,12 @@
   <div class="outer-container">
     <div class="container">
       <p style="text-align:center;">Here's a video from BoardGameGeek talking about the various 2022 Spiel des Jahres nominees:</p>
-      <iframe style="display:block;margin:auto;padding-bottom:2rem;" width="560" height="315" src="https://www.youtube.com/embed/uxh-v7R4P1M?start=93" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe id="vid" style="display:block;margin:auto;padding-bottom:2rem;" width="560" height="315" src="https://www.youtube.com/embed/uxh-v7R4P1M?start=93" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
-  <div style="height:20rem;">
+  <!-- <div style="height:20rem">
     <p style="text-align:center;padding-top:2rem;">Here we have two players, <strike>ruining</strike> consolidating their friendship with a game of Monopoly:</p>
-    <iframe style="display:block;margin:auto; padding: 0 2rem 2rem 2rem" src="https://giphy.com/embed/k0bv4ecnUx6lW" width="25%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
-  </div>
-  
+    <iframe id="gif" style="display:block;margin:auto; padding: 0 2rem 2rem 2rem" src="https://giphy.com/embed/k0bv4ecnUx6lW" width="25%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  </div> -->
 </body>
 </html>

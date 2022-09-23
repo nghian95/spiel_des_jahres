@@ -18,8 +18,21 @@ cascadiaImg.src = xmlDoc.getElementsByTagName("image")[0].childNodes[0].nodeValu
 cascadiaRating = document.getElementById("cascadiaRating");
 cascadiaRating.innerHTML += Math.round(xmlDoc.getElementsByTagName("average")[0].getAttribute('value')*10)/10;
 
+// document.getElementById('submit').onclick = function(e) {
+//   var regex = "[a-zA-Z0-9,#.-:]+";
+//   var element = document.getElementById("game");
+//   if (regex.test())
+//   alert(document.getElementById("game").value);
+// }
+
 document.getElementById('submit').onclick = function(e) {
-  alert(document.getElementById("game").value);
+  var regex = /[a-zA-Z0-9,#.-:]+/;
+  var element = document.getElementById("game");
+  if (regex.test(element.value)) {
+    alert(element.value);
+  } else {
+    alert("Wrong input");
+  }
 }
 
 var search = document.getElementById("search");

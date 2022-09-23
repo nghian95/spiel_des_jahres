@@ -10,11 +10,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rosarivo">
   <script type="text/javascript" src="./javascript/index.js" defer></script>
   <link href="./style/main.css" rel="stylesheet">
   <style>
     div > div > h2 {
       text-align:left;
+      
+    }
+    div > h1, h1~h2 {
+      font-family: 'Rosarivo';
     }
   </style>
 </head>
@@ -35,7 +40,7 @@
     </ul>
   </nav>
   <div class="jumbotron text-center">
-    <h1>Spiel des Jahres</h1>
+    <h1 style="font-family:">Spiel des Jahres</h1>
     <h2>Game of the Year</h2>
   </div>
   <div class="outer-container">
@@ -107,7 +112,7 @@
     </div>
   </div>
   <div class="outer-container">
-    <div class="container">
+    <div class="container" style="margin-bottom:1.9rem">
       <form>
         <div class="form-group">
           <label for="game">What's your favorite game?</label>
@@ -119,8 +124,14 @@
   </div>
   <div class="outer-container">
     <div class="container">
-      
+      <p style="text-align:center;">Here's a video from BoardGameGeek talking about the various 2022 Spiel des Jahres nominees:</p>
+      <iframe style="display:block;margin:auto;padding-bottom:2rem;" width="560" height="315" src="https://www.youtube.com/embed/uxh-v7R4P1M?start=93" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   </div>
+  <div style="height:20rem;">
+    <p style="text-align:center;padding-top:2rem;">Does anyone else's pet like to join in too?</p>
+    <iframe style="display:block;margin:auto; padding: 0 2rem 2rem 2rem" src="https://giphy.com/embed/k0bv4ecnUx6lW" width="25%" height="100%" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+  </div>
+  
 </body>
 </html>

@@ -91,6 +91,9 @@ $(document).ready(function() {
       $("tr:not(#headerRow)").filter(function(){
         $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
       });
+      // $("tr:not(#headerRow)").filter(function(){
+      //   $(this).toggle(value.test($(this).text()))
+      // });
     }
   }
 
